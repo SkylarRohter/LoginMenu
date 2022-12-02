@@ -1,16 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.srohter.loginmenu.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="663.0" prefWidth="613.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.srohter.loginmenu.HelloController">
+   <children>
+      <Pane id="menuPaneID" fx:id="menuPane" layoutX="92.0" layoutY="77.0" prefHeight="509.0" prefWidth="430.0" stylesheets="@style.css">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="509.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="430.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.25" green="0.637499988079071" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.006711409395973154">
+                           <color>
+                              <Color red="0.3019607961177826" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.800000011920929" green="0.9490196108818054" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Label layoutX="117.0" layoutY="43.0" prefHeight="102.0" prefWidth="196.0" text="Login+" textAlignment="CENTER">
+               <font>
+                  <Font name="Courier New" size="50.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailBox" layoutX="61.0" layoutY="198.0" prefHeight="26.0" prefWidth="308.0" />
+            <PasswordField fx:id="passwordBox" layoutX="61.0" layoutY="255.0" prefHeight="26.0" prefWidth="308.0" />
+            <Label fx:id="rememberLabel" layoutX="87.0" layoutY="304.0" text="Remember Me?" />
+            <CheckBox fx:id="rememberBox" layoutX="61.0" layoutY="300.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="26.0">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </CheckBox>
+            <Label fx:id="forgotPassword" layoutX="259.0" layoutY="304.0" text="Forgot Password?" />
+            <Button fx:id="loginButton" layoutX="63.0" layoutY="343.0" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="47.0" prefWidth="308.0" text="Login" textOverrun="CLIP" />
+            <Label fx:id="prePass" layoutX="61.0" layoutY="255.0" onMouseDragEntered="#prePassEnter" onMouseDragExited="#prePassExit" prefHeight="26.0" prefWidth="71.0" text="Password">
+               <font>
+                  <Font name="Courier New" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="preUser" layoutX="63.0" layoutY="198.0" prefHeight="26.0" prefWidth="71.0" text="Username">
+               <font>
+                  <Font name="Courier New" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="207.0" layoutY="21.0" prefHeight="47.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="30.0" layoutY="7.0" prefHeight="33.0" prefWidth="140.0" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Courier New" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

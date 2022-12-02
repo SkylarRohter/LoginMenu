@@ -1,0 +1,13 @@
+.root{
+    -fx-background-color:  #b3ffff;
+}
+#preUser{
+
+}
+#prePass{
+}
+
+/*-fx-border-radius: 10 10 0 0;*/
+/*-fx-background-radius: 10 10 0 0;*/
+
+/*!* top-left, top-right, bottom-right, and bottom-left corners, in that order. *!*/
